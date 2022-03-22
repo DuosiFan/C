@@ -8,4 +8,4 @@ doc: $(NAME).tex
 	latexmk -xelatex $(NAME).tex
 	latexmk -c $(NAME).tex
 run: $(NAME).app
-	./$(NAME).app
+	./$(NAME).app < input

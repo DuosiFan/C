@@ -18,42 +18,68 @@ int main(void)
 }
 
 
-/* 1. read the input until the first non blank character */
-/*     (named c) put the character in s[0] and put '\0' */
-/*     at s[1] */
-
-/* 2. If c is not a digit (0-9) or a decimal point, return */
-/*     c the procedure is done */
-
-/* 3. read the integer part */
-
-/* 4. read the decimal point */
-
-/* 5. read the fraction part */
-
-/* 6. put '\0' at the end */
-
 #include <ctype.h>
+int getch();
+void ungetch(int c);
+
 /* getop: get next character or numeric operand */
 int getop(char s[]) {
-  int c, i;
+  int c;
+  
+  while (isblank(c = getch()));
+  s[0] = c;
+  s[1] = '\0'; /* assume s is long enough */
 
-  while (isblank(s[0] = c = getchar()));
-  s[1] = '\0';
   if (!isdigit(c) && c != '.')
-    return c;
+    return c; /* not an operand */
 
-  i = 0;
-  /* read integer part */
-  if (isdigit(c))
-    while (isdigit(s[++i] = c = getchar()));
+  int pos = 1; /* next available position in s */
+  /* collect integer */
+  if (isdigit(c)) {
+    int i;
+    for (i = pos; isdigit(c = getch()); i++)
+      s[i] = c;
+    pos = i;
+  }
 
-  /* read fraction part */
-  if (c == '.')
-    while (isdigit(s[++i] = c = getchar()));
+  /* collect fraction if possible */
+  if (c == '.') {
+    s[pos] = '.';
+    pos++;
 
-  /* put '\0' at the end */
-  s[i] = '\0';
+    int i;
+    for (i = pos; isdigit(c = getch()); i++)
+      s[i] = c;
+    pos = i;
+  }
+
+  s[pos] = '\0';
+
+  /* buffer last non-digit char if not EOF */
+  if (c != EOF)
+    ungetch(c);
   
   return NUMBER;
 }
+
+
+/* external variables below are only visible to getch() and ungetch.
+   Note that, in this application, the maximum length of buffer is
+   1. */
+#define BUFFER_SIZE 10
+char buffer[BUFFER_SIZE]; /* input stream buffer */
+int buffer_pos = 0;    /* next available position in the buffer */
+
+/* getch: a buffered version of getchar */
+int getch() { return buffer_pos > 0 ? buffer[--buffer_pos] : getchar(); }
+
+/* ungetch: put char reading from input stream in a buffer. */
+void ungetch(int c) {
+  if (buffer_pos >= BUFFER_SIZE)
+    printf("ungetch: input stream buffer is full\n");
+  else
+    buffer[buffer_pos++] = c;
+}
+
+
+/* reverse_polish_calculator.c ends here */
