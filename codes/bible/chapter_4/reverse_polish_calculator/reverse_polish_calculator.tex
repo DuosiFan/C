@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage{algpseudocode}
+
+\begin{document}
+\section{Overview}
+\begin{algorithmic}
+  \While {\texttt{next operator or operand is not EOF}}
+  \If{number}
+  \State \texttt{it}
+  \ElsIf{operator}
+  \State pop operands
+  \State do operation
+  \State push result
+  \ElsIf{newline}
+  \State pop and print top of stack
+  \Else
+  \State error
+  \EndIf
+  \EndWhile
+\end{algorithmic}
+\end{document}
