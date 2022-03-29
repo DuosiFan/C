@@ -1,5 +1,15 @@
-CFLAGS=-ggdb3 -Wall -Werror -pedantic -std=c99
+CFLAGS :=-ggdb3 -Wall -Werror -pedantic -std=c99
+OBJS := main.o stack.o getop.o getch.o
+HEADERS := calc.h
 
-RPC.app: main.c
-	gcc $(CFLAGS) main.c -o RPC.app
-	./RPC.app < input
+calculator.app: $(OBJS) $(HEADERS)
+	gcc $(OBJS) -o $@
+
+%.c.o: %.c
+	gcc $(CFLAGS) -c $<
+
+.PHONY: clean cleanall
+clean:
+	rm *.o
+cleanall:
+	rm *.o *.app
