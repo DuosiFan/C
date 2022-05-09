@@ -1,0 +1,22 @@
+Hand 1:
+--------
+Ks Qh 0s 9h 8d 6c 2s 
+ - No flush
+ - The most of a kind is 1 of a kind (at index 0 / value K)
+ - No secondary pair
+ - evaluate_hand's ranking: NOTHING
+ - 5 cards used for hand: Ks Qh 0s 9h 8d 
+Hand 2:
+--------
+Ks Qh 0s 9h 8d 6c 2s 
+ - No flush
+ - The most of a kind is 1 of a kind (at index 0 / value K)
+ - No secondary pair
+ - evaluate_hand's ranking: NOTHING
+ - 5 cards used for hand: Ks Qh 0s 9h 8d 
+Hand 1 is Ks Qh 0s 9h 8d 6c 2s which is a NOTHING [Ks Qh 0s 9h 8d ]
+Hand 2 is Ks Qh 0s 9h 8d 6c 2s which is a NOTHING [Ks Qh 0s 9h 8d ]    {Tie}
+Comparison : 
+--------------
+Tie
+============================

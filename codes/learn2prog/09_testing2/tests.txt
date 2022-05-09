@@ -1,0 +1,11 @@
+aaaaa bbbbb
+aaaaa bbbb
+$abcd $$abc
+aaaaa bbbbbb
+aaaaaa bbbbbb
+a b
+aabaa bbbaa
+aaaaa bbbbb ccccc
+aaaaa bbbbb ccccc ddddd
+Aaaab aaaab
+aaaaa

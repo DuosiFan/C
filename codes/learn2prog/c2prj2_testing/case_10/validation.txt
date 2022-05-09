@@ -1,0 +1,24 @@
+Hand 1:
+--------
+Qs Js 0d 9d 8d 4d 3d 
+ - Flush in suit d
+ - Straight at index 0
+ - The most of a kind is 1 of a kind (at index 0 / value Q)
+ - No secondary pair
+ - evaluate_hand's ranking: FLUSH
+ - 5 cards used for hand: 0d 9d 8d 4d 3d 
+Hand 2:
+--------
+Qs Js 0s 9s 8s 4d 3d 
+ - Flush in suit s
+ - Straight flush at index 0
+ - The most of a kind is 1 of a kind (at index 0 / value Q)
+ - No secondary pair
+ - evaluate_hand's ranking: STRAIGHT_FLUSH
+ - 5 cards used for hand: Qs Js 0s 9s 8s 
+Hand 1 is Qs Js 0d 9d 8d 4d 3d which is a FLUSH [0d 9d 8d 4d 3d ]
+Hand 2 is Qs Js 0s 9s 8s 4d 3d which is a STRAIGHT_FLUSH [Qs Js 0s 9s 8s ]   {Hand 2 wins: ranking} 
+Comparison : 
+--------------
+Hand 2 wins!
+============================

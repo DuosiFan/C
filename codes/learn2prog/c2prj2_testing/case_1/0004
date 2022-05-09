@@ -1,0 +1,24 @@
+Hand 1:
+--------
+Ac Jd 0d 5s 4d 3h 2c 
+ - No flush
+ - Straight at index 0
+ - The most of a kind is 1 of a kind (at index 0 / value A)
+ - Secondary pair at index 0 (value A)
+ - evaluate_hand's ranking: STRAIGHT
+ - 5 cards used for hand: 5s 4d 3h 2c Ac 
+Hand 2:
+--------
+Jd 0d 6c 5s 4d 3h 2c 
+ - No flush
+ - Straight at index 2
+ - The most of a kind is 1 of a kind (at index 0 / value J)
+ - Secondary pair at index 0 (value J)
+ - evaluate_hand's ranking: STRAIGHT
+ - 5 cards used for hand: 6c 5s 4d 3h 2c 
+Hand 1 is Ac Jd 0d 5s 4d 3h 2c which is a STRAIGHT [5s 4d 3h 2c Ac ]
+Hand 2 is Jd 0d 6c 5s 4d 3h 2c which is a STRAIGHT [6c 5s 4d 3h 2c ]   {Hand 2 wins: 0 card} 
+Comparison : 
+--------------
+Hand 2 wins!
+============================

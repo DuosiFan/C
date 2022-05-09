@@ -1,0 +1,24 @@
+Hand 1:
+--------
+Qs Jd 0d 0s 9s 8c 8d 
+ - No flush
+ - Straight at index 0
+ - The most of a kind is 2 of a kind (at index 2 / value 0)
+ - Secondary pair at index 5 (value 8)
+ - evaluate_hand's ranking: STRAIGHT
+ - 5 cards used for hand: Qs Jd 0d 9s 8c 
+Hand 2:
+--------
+Qs Jd 0d 0s 9s 8c 8d 
+ - No flush
+ - Straight at index 0
+ - The most of a kind is 2 of a kind (at index 2 / value 0)
+ - Secondary pair at index 5 (value 8)
+ - evaluate_hand's ranking: STRAIGHT
+ - 5 cards used for hand: Qs Jd 0d 9s 8c 
+Hand 1 is Qs Jd 0d 0s 9s 8c 8d which is a STRAIGHT [Qs Jd 0d 9s 8c ]
+Hand 2 is Qs Jd 0d 0s 9s 8c 8d which is a STRAIGHT [Qs Jd 0d 9s 8c ]    {Tie}
+Comparison : 
+--------------
+Tie
+============================
