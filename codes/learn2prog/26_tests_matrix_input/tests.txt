@@ -1,8 +1,0 @@
-extra_lines.txt
-lack_lines.txt
-too_long.txt
-too_short.txt
-not_exist.txt
-a b
-
-EOF.txt
